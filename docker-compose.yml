@@ -1,0 +1,24 @@
+version: '3'
+
+nodejs:
+   build:
+     context: .
+     dockerfile: Dockerfile
+   container_name: musicstore-api
+   ports:
+    - 80:80
+   links:
+    - mongodb
+   command: npm start
+
+
+mongodb:
+   image: mongo
+   container_name: mongodb
+   ports:
+    - 27017:27017
+   volumes:
+    - mongodb-data:/data/db
+
+volumes:
+   mongodb-data:
