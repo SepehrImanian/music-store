@@ -5,5 +5,5 @@ And this project use nodejs + mongodb
 
 #### Getstart "setup"
 ```bash
-    docker-compose up 
+    docker-compose up -d
 ```
