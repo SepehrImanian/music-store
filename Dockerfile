@@ -2,9 +2,7 @@ FROM alpine:latest
 
 LABEL maintainer="sepehr_imanian"
 
-RUN apk add --no-cache bash
-
-RUN apk add --update nodejs npm
+RUN apk add bash nodejs npm python3 make g++
 
 COPY . /home
 
